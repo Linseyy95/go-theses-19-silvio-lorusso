@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Media Queries Examples</title>
+
+  <style type="text/css">
+
+    /* ------- GENERAL STYLES ------- */
+
+    h1 {
+      text-align: center;
+    }      
+
+    #shape {
+      margin: 50px auto;
+      width: 300px;
+      height: 300px;
+      background-color: blue;
+    }
+
+    #device p {
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    #info {
+      display: block !important;
+    }
+
+
+    /* ------- MEDIA QUERIES ------- */
+
+
+    /* Desktop */
+    @media only screen and (min-width: 1025px)  {
+      
+      #desktop {
+        display: block !important;
+      }
+      
+    }
+
+    /* Tablet */
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      
+      #shape {
+        background-color: red;
+      }
+
+      #tablet {
+        display: block !important;
+      }
+      
+    }
+
+    /* Mobile */ 
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+      
+      #shape {
+        background-color: yellow;
+      }
+
+      #mobile {
+        display: block !important;
+      }
+      
+    }
+
+    /* Print */
+    @media print { 
+
+      body {
+        -webkit-print-color-adjust: exact !important;
+      }
+
+      #shape {
+        background-color: grey;
+      }
+
+      #print { 
+        display: block !important; 
+      } 
+    
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<h1>Media Queries Examples</h1>
+
+<div id="shape"></div>
+
+<div id="device">
+  <p id="desktop">Desktop</p>
+  <p id="tablet">Tablet</p>
+  <p id="mobile">Mobile</p>
+  <p id="print">Print</p>
+  <p id="info">More info <a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp">here.</a>
+</div>
+
+</body>
+</html> 
